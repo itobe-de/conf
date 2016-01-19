@@ -1,0 +1,37 @@
+[user]
+name = hwg-develop
+email = develop@hwg-media.de
+
+[core]
+	autocrlf = input
+  whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
+
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
+
+[alias]
+  co = checkout
+  ci = commit
+  st = status
+  br = branch
+	unstage = reset HEAD --
+	last = log --oneline -5
+
+[color]
+    ui = auto
+  [color "branch"]
+    current = green reverse
+    local = green
+    remote = red
+  [color "diff"]
+    meta = yellow
+    frag = magenta
+    old = red
+    new = green
+    whitespace = red reverse
+  [color "status"]
+    added = yellow
+    changed = green
+    untracked = cyan
